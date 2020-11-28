@@ -3,7 +3,7 @@
 
 Author: Spencer C. DeMera\
  Author's email: Spencer.demera@csu.fullerton.edu\
- Course: CPSC 223N\
+ Course: CPSC 223N
 ---
 Development status.  Theses programs are done.  They fulfill their purpose of creating simple visual CShapr Applications.
 
