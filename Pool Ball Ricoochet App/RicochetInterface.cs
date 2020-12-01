@@ -16,8 +16,8 @@
 //  Program name: Ricochet
 //  Programming language: C#
 //  Date program began: 10-30-2020
-//  Date of last update: 10-
-//  Comments reorganized: 10-
+//  Date of last update: 11-13-2020
+//  Comments reorganized: 11-13-2020
 //  Files in the program: main.cs, boardInterface.cs run.sh
 //
 //Purpose
