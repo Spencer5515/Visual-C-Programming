@@ -38,23 +38,12 @@ using System;
 using System.Windows.Forms;            //Needed for "Application.Run" near the end of Main function.
 
 public class main {
-    public static void Main() {
-        // System.Console.WriteLine("The graphics program will begin now.");
-        // RicochetInterface Ricochet_app = new RicochetInterface();
-
-        // Application.Run(Ricochet_app);
-        // System.Console.WriteLine("This graphics program has ended.  Bye.");   
-
+    public static void Main() {  
         System.Console.WriteLine("The ricochet ball program will begin now.");
-        //Declare the basic quantities needed for a straight line motion application: speed and direction.
-        // double speed = 81.9; //C# units, namely: pixels/sec.
-        //Direction may be specified in either of two ways: (a) an angle number, or (b) a vector u⃗ = <v,w>
-        //In this program we use the second choice.
-        // double v = 37.2;
-        // double w = 21.8;
-        // RicochetInterface ricochet_application = new RicochetInterface(speed,v,w);
+        
         RicochetInterface ricochet_application = new RicochetInterface();
         Application.Run(ricochet_application);
+        
         System.Console.WriteLine("This ricochet ball program has ended.  Bye.");
       } //End of Main function
 } //End of main class
