@@ -104,6 +104,10 @@ public class RicochetInterface : Form {
     private Label RedyInputArea = new Label();
     private Label BluexInputArea = new Label();
     private Label BlueyInputArea = new Label();
+    private Label RedX = new Label();
+    private Label RedY = new Label();
+    private Label BlueX = new Label();
+    private Label BlueY = new Label();
     private Label RedBallLabel = new Label();
     private Label BlueBallLabel = new Label();
     
@@ -124,14 +128,22 @@ public class RicochetInterface : Form {
         BlueyInputArea.Size = new Size(50, 40);
         RedBallLabel.Size = new Size(180, 30);
         BlueBallLabel.Size = new Size(180, 30);
+        RedX.Size = new Size(30, 30);
+        RedY.Size = new Size(30, 30);
+        BlueX.Size = new Size(30, 30);
+        BlueY.Size = new Size(30, 30);
 
         //Input Area locations
-        RedxInputArea.Location = new Point(275, 910);
-        RedyInputArea.Location = new Point(350, 910);
-        BluexInputArea.Location = new Point(595, 910);
-        BlueyInputArea.Location = new Point(670, 910);
+        RedxInputArea.Location = new Point(285, 910);
+        RedyInputArea.Location = new Point(370, 910);
+        BluexInputArea.Location = new Point(605, 910);
+        BlueyInputArea.Location = new Point(690, 910);
         RedBallLabel.Location = new Point(250, 865);
         BlueBallLabel.Location = new Point(570, 865);
+        RedX.Location = new Point(255, 915);
+        RedY.Location = new Point(340, 915);
+        BlueX.Location = new Point(575, 915);
+        BlueY.Location = new Point(660, 915);
 
         //Input Area text strings and fonts
         RedxInputArea.Text = "0";
@@ -140,6 +152,10 @@ public class RicochetInterface : Form {
         BlueyInputArea.Text = "0";
         RedBallLabel.Text = "Red Ball Location";
         BlueBallLabel.Text = "Blue Ball Location";
+        RedX.Text = "X = ";
+        RedY.Text = "Y = ";
+        BlueX.Text = "X = ";
+        BlueY.Text = "Y = ";
 
         RedBallLabel.Font = new Font("Arial", 10, FontStyle.Bold);
         BlueBallLabel.Font = new Font("Arial", 10, FontStyle.Bold);
@@ -147,6 +163,10 @@ public class RicochetInterface : Form {
         RedyInputArea.Font = new Font("Arial", 10, FontStyle.Bold);
         BluexInputArea.Font = new Font("Arial", 10, FontStyle.Bold);
         BlueyInputArea.Font = new Font("Arial", 10, FontStyle.Bold);
+        RedX.Font = new Font("Arial", 10, FontStyle.Bold);
+        RedY.Font = new Font("Arial", 10, FontStyle.Bold);
+        BlueX.Font = new Font("Arial", 10, FontStyle.Bold);
+        BlueY.Font = new Font("Arial", 10, FontStyle.Bold);
         
         // ========== Colors & Formatting ==========
         RedBallLabel.ForeColor = Color.Black;
@@ -169,6 +189,20 @@ public class RicochetInterface : Form {
         BlueyInputArea.ForeColor = Color.Black;
         BlueyInputArea.BackColor = Color.White;
         BlueyInputArea.TextAlign = ContentAlignment.MiddleCenter;
+
+        RedX.ForeColor = Color.White;
+        RedX.BackColor = Color.SlateGray;
+        RedX.TextAlign = ContentAlignment.MiddleCenter;
+        RedY.ForeColor = Color.White;
+        RedY.BackColor = Color.SlateGray;
+        RedY.TextAlign = ContentAlignment.MiddleCenter;
+
+        BlueX.ForeColor = Color.White;
+        BlueX.BackColor = Color.SlateGray;
+        BlueX.TextAlign = ContentAlignment.MiddleCenter;
+        BlueY.ForeColor = Color.White;
+        BlueY.BackColor = Color.SlateGray;
+        BlueY.TextAlign = ContentAlignment.MiddleCenter;
 
         // ========== Clock Formatting ==========
         //Set up the motion clock.  This clock controls the rate of update of the coordinates of the ball.
@@ -218,6 +252,10 @@ public class RicochetInterface : Form {
         Controls.Add(BlueyInputArea);
         Controls.Add(RedBallLabel);
         Controls.Add(BlueBallLabel);
+        Controls.Add(RedX);
+        Controls.Add(RedY);
+        Controls.Add(BlueX);
+        Controls.Add(BlueY);
 
         RedxInputArea.Text = String.Format("{0:0}", RedCenterCoordX);
         RedyInputArea.Text = String.Format("{0:0}", RedCenterCoordY);
@@ -383,6 +421,7 @@ public class RicochetInterface : Form {
             MotionControlClock.Enabled = false;   //Stop clock ticking
             GraphicRefreshClock.Enabled = false;   //Stop clock ticking
             System.Console.WriteLine("New instance created.");
+            GameEnd = false;
         } // else if
         Invalidate();
     } // End of New function
@@ -393,4 +432,3 @@ public class RicochetInterface : Form {
         Close(); 
     } // End of Exit function
 } // End of class RicochetInterface.cs
-
